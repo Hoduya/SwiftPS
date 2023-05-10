@@ -8,20 +8,16 @@
 import Foundation
 
 func solution(_ land:[[Int]]) -> Int{
-    var dp = Array(repeating: Array(repeating: 0, count: 4), count: land.count)
-    dp[0][0...3] = land[0][0...3]
-    
+    var land = land
+
     for i in 1..<land.count {
-        for j in 0..<4 {
-            var maxScore = 0
-            for k in 0..<4 {
-                guard j != k else { continue }
-                maxScore = max(maxScore, dp[i - 1][k])
-            }
-            dp[i][j] = land[i][j] + maxScore
-        }
+        land[i][0] += max(land[i-1][1], land[i-1][2], land[i-1][3])
+        land[i][1] += max(land[i-1][0], land[i-1][2], land[i-1][3])
+        land[i][2] += max(land[i-1][0], land[i-1][1], land[i-1][3])
+        land[i][3] += max(land[i-1][0], land[i-1][1], land[i-1][2])
     }
-    
-    return dp[land.count - 1].max()!
+
+    return land.last!.max()!
 }
+
 
