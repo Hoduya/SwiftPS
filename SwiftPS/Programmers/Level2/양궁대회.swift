@@ -1,8 +1,8 @@
 //
-//  main.swift
+//  양궁대회.swift
 //  SwiftPS
 //
-//  Created by HoJun on 2023/04/15.
+//  Created by HoJun on 2023/05/14.
 //
 
 import Foundation
