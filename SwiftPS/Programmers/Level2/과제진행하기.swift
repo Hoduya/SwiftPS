@@ -70,4 +70,3 @@ func solution(_ plans:[[String]]) -> [String] {
 }
 
 
-print(solution([["science", "12:00", "50"], ["history", "12:49", "30"], ["Sdf", "13:01", "20"]]))
