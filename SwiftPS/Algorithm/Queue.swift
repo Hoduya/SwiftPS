@@ -34,7 +34,7 @@ public struct Queue<T> {
     
     mutating func pop() -> T? {
         guard head < array.count,
-              let popItem = array[head] else { return nil}
+              let popItem = array[head] else { return nil }
         
         array[head] = nil
         head += 1

@@ -7,6 +7,12 @@
 
 import Foundation
 
+struct Dot {
+    let x: Int
+    let y: Int
+    let count: Int
+}
+
 func solution(_ k:Int, _ d:Int) -> Int64 {
     var result = 0
     
@@ -18,4 +24,8 @@ func solution(_ k:Int, _ d:Int) -> Int64 {
     result += d / k + 1
     
     return Int64(result)
+}
+
+func bts() {
+    
 }
